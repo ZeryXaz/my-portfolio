@@ -1,0 +1,47 @@
+{
+  "categories": [
+    {
+      "id": "programming",
+      "title": "Programming Languages",
+      "icon": "code",
+      "skills": [
+        { "name": "HTML5", "level": "Intermediate" },
+        { "name": "CSS3", "level": "Intermediate" },
+        { "name": "JavaScript", "level": "Basic" },
+        { "name": "PHP", "level": "Basic" },
+        { "name": "SQL", "level": "Intermediate" }
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "Backend & Database",
+      "icon": "database",
+      "skills": [
+        { "name": "Laravel", "level": "Intermediate" },
+        { "name": "MySQL", "level": "Intermediate" },
+        { "name": "Oracle Database", "level": "Basic" }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Development Tools",
+      "icon": "tool",
+      "skills": [
+        { "name": "Git & GitHub", "level": "Intermediate" },
+        { "name": "VS Code", "level": "Intermediate" },
+        { "name": "Figma", "level": "Basic" },
+        { "name": "XAMPP", "level": "Intermediate" }
+      ]
+    },
+    {
+      "id": "other",
+      "title": "Other Skills",
+      "icon": "cpu",
+      "skills": [
+        { "name": "System Analysis", "level": "Intermediate" },
+        { "name": "Problem Solving", "level": "Intermediate" },
+        { "name": "Team Collaboration", "level": "Intermediate" }
+      ]
+    }
+  ]
+}

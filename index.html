@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <meta name="description" content="Web Portfolio ของนักศึกษาสาย Information Technology แสดงทักษะการเขียนโปรแกรม ผลงานเว็บแอปพลิเคชัน คลาวด์ และใบรับรองทางเทคโนโลยี" />
+  <meta name="keywords" content="IT Portfolio, Web Developer, Information Technology, Software Engineer, Cloud Computing, Full-Stack" />
+  <meta name="author" content="IT Student" />
+
+  <!-- Favicon & Web Manifest -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Modular CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/timeline.css" />
+  <link rel="stylesheet" href="css/certificates.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/animation.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script>
+  (() => {
+    const theme = localStorage.getItem("portfolio_theme");
+    document.documentElement.dataset.theme =
+      theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  })();
+  </script>
+</head>
+<body>
+  <!-- Shared Navbar Component Placeholder -->
+  <header id="navbar-placeholder"></header>
+
+  <main>
+    <!-- ==========================================================================
+       SECTION 1: HERO SECTION
+       ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Left Text Column -->
+          <div class="hero-text-content hero-fade-in">
+
+            <h1 class="hero-title">
+              สวัสดีครับ, ผมคือ <br />
+              <span class="typing-container" id="typing-role"></span>
+              <span class="typing-cursor"></span>
+            </h1>
+
+            <p class="hero-description">
+              นักศึกษาชั้นปีที่ 4 สาขาเทคโนโลยีสารสนเทศ
+              คณะเทคโนโลยีสารสนเทศและนวัตกรรม
+              มหาวิทยาลัยกรุงเทพ
+              มีความสนใจด้านการพัฒนาเว็บไซต์ ระบบสารสนเทศ
+              และการดูแลระบบคอมพิวเตอร์ พร้อมเรียนรู้และพัฒนาทักษะเพื่อก้าวสู่สายงาน IT Support
+            </p>
+
+            <div class="hero-actions">
+
+
+              <a href="pages/contact.html" class="btn btn-secondary">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+
+                ติดต่อฉัน
+
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Right Image Column -->
+          <div class="hero-avatar-wrapper hero-fade-in">
+
+            <div class="hero-avatar-frame">
+              <img
+                src="assets/images/profile.png"
+                alt="Kongphop Jindapornsuk"
+                class="hero-avatar-img" />
+            </div>
+
+            <div class="hero-experience-badge">
+              <span class="badge-number">3.80</span>
+              <span class="badge-text">
+                เกรดเฉลี่ยสะสม<br>
+                GPA
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 2: ABOUT SUMMARY & GPA HIGHLIGHT
+       ========================================================================== -->
+    <section class="section" id="about-summary">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">ABOUT ME</span>
+          <h2 class="section-title">เกี่ยวกับฉันและเป้าหมาย</h2>
+          <p class="section-desc">
+            ข้อมูลส่วนตัว ประวัติการศึกษา ความสนใจ และเป้าหมายในการทำงานด้านเทคโนโลยีสารสนเทศ
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- About -->
+          <div class="about-card antigravity-reveal">
+            <h3 class="about-card-title">
+              <svg class="about-card-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              ข้อมูลและประวัติโดยย่อ
+            </h3>
+
+            <p class="about-bio-text">
+              ผมเป็นนักศึกษาชั้นปีที่ 4 สาขาเทคโนโลยีสารสนเทศ
+              คณะเทคโนโลยีสารสนเทศและนวัตกรรม มหาวิทยาลัยกรุงเทพ
+              มีความสนใจด้านการพัฒนาเว็บไซต์ ระบบสารสนเทศ และการดูแลระบบคอมพิวเตอร์
+              พร้อมเรียนรู้เทคโนโลยีใหม่ ๆ และพัฒนาทักษะเพื่อเตรียมความพร้อมสำหรับการทำงานในสายงาน IT Support
+            </p>
+
+            <div class="gpa-badge-container">
+              <div class="gpa-value">3.80</div>
+
+              <div>
+                <div class="gpa-label">
+                  เกรดเฉลี่ยสะสม (GPA 3.80 / 4.00)
+                </div>
+
+                <div class="gpa-subtext">
+                  หลักสูตรวิทยาศาสตรบัณฑิต สาขาเทคโนโลยีสารสนเทศ
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Career Goal -->
+          <div class="about-card antigravity-reveal antigravity-delay-1">
+            <h3 class="about-card-title">
+              <svg class="about-card-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="12 8 8 12 12 16 12 8"></polygon>
+              </svg>
+              เป้าหมายอาชีพ (Career Goal)
+            </h3>
+
+            <div class="career-goal-box">
+              <div class="career-goal-title">
+                IT Support
+              </div>
+
+              <p class="career-goal-desc">
+                มุ่งพัฒนาความรู้และประสบการณ์ด้านการสนับสนุนผู้ใช้งาน
+                การแก้ไขปัญหาระบบคอมพิวเตอร์ เครือข่าย และระบบสารสนเทศ
+                เพื่อเติบโตเป็นบุคลากรด้าน IT Support ที่สามารถช่วยให้องค์กรทำงานได้อย่างมีประสิทธิภาพ
+              </p>
+            </div>
+
+            <h4 style="margin-top: 1.5rem; font-size: 0.95rem; font-weight: 700;">
+              ความสนใจ (Interests)
+            </h4>
+
+            <div class="interests-grid">
+              <span class="interest-tag">IT Support</span>
+              <span class="interest-tag">Web Development</span>
+              <span class="interest-tag">Database</span>
+              <span class="interest-tag">Networking</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 3: FEATURED PROJECTS SHOWCASE
+       ========================================================================== -->
+    <section class="section" id="featured-projects" style="background-color: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">PROJECTS</span>
+          <h2 class="section-title">ผลงาน (Projects)</h2>
+          <p class="section-desc">ตัวอย่างโครงการพัฒนาเว็บไซต์และระบบสารสนเทศที่ได้ออกแบบและพัฒนาขึ้น โดยใช้เทคโนโลยีและเครื่องมือต่าง ๆ ในการพัฒนาซอฟต์แวร์</p>
+        </div>
+
+        <!-- Dynamic Projects Grid loaded via project-filter.js -->
+        <div class="projects-grid" id="projects-grid-container">
+          <p style="text-align: center; grid-column: 1/-1;">กำลังโหลดผลงาน...</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="pages/projects.html" class="btn btn-secondary">
+            ดูผลงานทั้งหมด (View All Projects) &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECTION 4: SKILLS SUMMARY
+       ========================================================================== -->
+    <section class="section" id="skills-summary">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">TECH STACK</span>
+          <h2 class="section-title">ทักษะความเชี่ยวชาญด้าน IT</h2>
+          <p class="section-desc">รวมภาษาโปรแกรมมิ่ง เฟรมเวิร์ก เครื่องมือ และระบบฐานข้อมูลที่เชี่ยวชาญ</p>
+        </div>
+
+        <!-- Dynamic Skills Grid loaded via JSON -->
+        <div class="skills-category-grid" id="skills-container">
+          <p style="text-align: center; grid-column: 1/-1;">กำลังโหลดข้อมูลทักษะ...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Component Placeholder -->
+  <footer id="footer-placeholder"></footer>
+
+  <!-- Application Entry Script (ES Module) -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

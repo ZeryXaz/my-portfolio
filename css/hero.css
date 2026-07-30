@@ -1,0 +1,200 @@
+/* ==========================================================================
+   HERO SECTION STYLES
+   ========================================================================== */
+
+.hero-section {
+  padding-top: calc(var(--header-height) + 4rem);
+  padding-bottom: 5rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Accent Decoration */
+.hero-bg-glow {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(40px);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Text Content */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 1.5rem;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-secondary);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.hero-title {
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+}
+
+.typing-container {
+  display: block;
+  min-height: 3.5rem;
+  color: var(--accent-primary);
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background-color: var(--accent-primary);
+  margin-left: 2px;
+  animation: blink 0.8s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.25rem;
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* Action Buttons */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary {
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+.btn-secondary {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+/* Hero Avatar Frame */
+.hero-avatar-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-avatar-frame {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid var(--bg-secondary);
+  transition: transform var(--transition-normal);
+}
+
+.hero-avatar-frame:hover {
+  transform: scale(1.02);
+}
+
+.hero-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-experience-badge {
+  position: absolute;
+  bottom: -15px;
+  right: 10px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.badge-number {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+.badge-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-secondary);
+}

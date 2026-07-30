@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects Portfolio | รวมผลงานซอฟต์แวร์ - IT Portfolio</title>
+  <meta name="description" content="คลังรวมผลงานโครงการซอฟต์แวร์ เว็บแอปพลิเคชัน ระบบคลาวด์ และโครงงานวิจัยทางเทคโนโลยีสารสนเทศ" />
+
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Relative Modular CSS Stylesheets -->
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/hero.css" />
+  <link rel="stylesheet" href="../css/about.css" />
+  <link rel="stylesheet" href="../css/projects.css" />
+  <link rel="stylesheet" href="../css/skills.css" />
+  <link rel="stylesheet" href="../css/timeline.css" />
+  <link rel="stylesheet" href="../css/certificates.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/animation.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <script>
+  (() => {
+    const theme = localStorage.getItem("portfolio_theme");
+    document.documentElement.dataset.theme =
+      theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  })();
+  </script>
+</head>
+<body>
+  <!-- Shared Navbar Component Placeholder -->
+  <header id="navbar-placeholder"></header>
+
+  <main style="padding-top: calc(var(--header-height) + 2rem);">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">MY PROJECTS</span>
+          <h2 class="section-title">ผลงานและการพัฒนาซอฟต์แวร์</h2>
+          <p class="section-desc">รวมโครงการพัฒนาเว็บแอปพลิเคชัน ระบบคลาวด์ และไอโอที สามารถกรองผลงานตามหมวดหมู่ได้</p>
+        </div>
+
+        <!-- Filter Tab Buttons -->
+        <div class="project-filter-container">
+          <button class="filter-btn active" data-filter="all">ทั้งหมด (All)</button>
+          <button class="filter-btn" data-filter="web">Web App</button>
+          <button class="filter-btn" data-filter="ui">UX/UI Design</button>
+          <button class="filter-btn" data-filter="iot">IoT</button>
+        </div>
+
+        <!-- Dynamic Projects Grid Container -->
+        <div class="projects-grid" id="projects-grid-container">
+          <p style="text-align: center; grid-column: 1/-1;">กำลังโหลดผลงาน...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Component Placeholder -->
+  <footer id="footer-placeholder"></footer>
+
+  <!-- Application Entry Script (ES Module) -->
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

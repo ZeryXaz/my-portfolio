@@ -1,0 +1,47 @@
+[
+  {
+    "id": "proj-1",
+    "title": "Smart Shuttle Management",
+    "description": "ระบบควบคุมรถราง ที่ใช้ข้อมูล Real-time ในการตัดสินใจปล่อยรถให้เหมาะกับปริมาณผู้โดยสาร โดยควบคุมระบบในรูปแบบ Dashbord เพื่อแก้ปัญหาการปล่อยรถที่ไม่เป็นระบบ",
+    "category": "ui",
+    "categoryName": "UI/UX Design",
+    "video": "assets/video/Shuttle.mp4",
+    "tags": ["Figma", "Prototype", "Design System"],
+    "figma": "https://www.figma.com/design/fPOMgJAlEdSwwN8WCtTKne/Smart-Shuttle-Management?node-id=0-1&t=LQ1evAlVVRLg3fJB-1",
+    "prototype": "https://www.figma.com/proto/fPOMgJAlEdSwwN8WCtTKne/Smart-Shuttle-Management?node-id=2004-94025&p=f&t=LQ1evAlVVRLg3fJB-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1"
+  },
+  {
+    "id": "proj-2",
+    "title": "Blue light detector",
+    "description": "อุปกรณ์วัดแสงเพื่อความปลอดภัยต่อสายตา เป็นนวัตกรรมต้นแบบที่พัฒนาขึ้นเพื่อวัดความเข้มของแสงในพื้นที่ใช้งานคอมพิวเตอร์ และแจ้งเตือนเมื่อระดับแสงไม่เหมาะสม ช่วยส่งเสริมสภาพแวดล้อมการทำงานที่ปลอดภัยและลดความเสี่ยงต่อการเกิดอาการเมื่อยล้าทางสายตา",
+    "category": "iot",
+    "categoryName": "IoT Prototype",
+    "images": [
+      "assets/images/project2-1.png",
+      "assets/images/project2-2.png"
+    ],
+    "tags": ["IoT","Light Sensor","ESP32","Arduino"],
+    "slides": "assets/files/Project2_Slides.pdf"
+  },
+  {
+    "id": "proj-3",
+    "title": "An Inventory and Asset Management System",
+    "description": "ระบบบริหารจัดการคลังวัสดุและครุภัณฑ์ ซึ่งเป็นระบบที่ดำเนินงานในรูปแบบระบบที่เรียกใช้งานผ่าน Web-based Application เพื่อตอบสนองกลุ่มผู้ใช้ที่เป็นเจ้าหน้าที่ในฝ่ายวัสดุหรือแผนกวัสดุ",
+    "category": "web",
+    "categoryName": "Web Application",
+    "image": "assets/images/project3.png",
+    "tags": ["Full Stack", "Inventory System", "Web Application", "Database","Final Project"],
+    "inProgress": true
+  },
+  {
+    "id": "proj-4",
+    "title": "Product Management System",
+    "description": "เว็บแอปพลิเคชันสำหรับบริหารจัดการข้อมูลสินค้า พนักงาน ลูกค้า การขาย และการจัดส่งสินค้า ช่วยเพิ่มประสิทธิภาพในการดำเนินงาน ลดความผิดพลาดจากการทำงานแบบแมนนวล และสนับสนุนการบริหารจัดการข้อมูลภายในองค์กร",
+    "category": "web",
+    "categoryName": "Web Application",
+    "image": "assets/images/project4.png",
+    "tags": ["PHP", "JavaScript", "HTML", "MySQL","CSS"],
+    "github": "https://github.com/ZeryXaz/DrugStore",
+    "slides": "assets/files/Project4_Slides.pdf"
+  }
+]

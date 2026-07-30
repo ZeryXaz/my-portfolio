@@ -1,0 +1,123 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   Mobile (<768px), Tablet (768px - 1024px), Desktop (>1024px)
+   ========================================================================== */
+
+/* Tablet Breakpoint (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.75rem;
+  }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile Breakpoint (max-width: 768px) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  /* Mobile Drawer Menu */
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-light);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.5rem;
+    gap: 1rem;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+  }
+
+  .nav-menu.is-active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-link {
+    font-size: 1.05rem;
+    padding: 0.75rem 0;
+  }
+
+  .nav-btn-contact {
+    text-align: center;
+  }
+
+  /* Hero Mobile Layout */
+  .hero-section {
+    padding-top: calc(var(--header-height) + 2rem);
+    min-height: auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    margin: 0 auto 2rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-avatar-frame {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* Footer Links Group Mobile */
+  .footer-links-group {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .timeline-container {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-dot {
+    left: -1.5rem;
+  }
+}

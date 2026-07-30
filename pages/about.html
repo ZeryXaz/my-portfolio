@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | ประวัติและการศึกษา - IT Portfolio</title>
+  <meta name="description" content="เกี่ยวกับประวัติการศึกษา เกรดเฉลี่ย GPA 3.85 ความสนใจเฉพาะทาง และเป้าหมายการทำงานในสายงาน IT" />
+
+  <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="../site.webmanifest" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Relative Modular CSS Stylesheets -->
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/hero.css" />
+  <link rel="stylesheet" href="../css/about.css" />
+  <link rel="stylesheet" href="../css/projects.css" />
+  <link rel="stylesheet" href="../css/skills.css" />
+  <link rel="stylesheet" href="../css/timeline.css" />
+  <link rel="stylesheet" href="../css/certificates.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/animation.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+  <script>
+  (() => {
+    const theme = localStorage.getItem("portfolio_theme");
+    document.documentElement.dataset.theme =
+      theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  })();
+  </script>
+</head>
+<body>
+  <!-- Shared Navbar Component Placeholder -->
+  <header id="navbar-placeholder"></header>
+
+  <main style="padding-top: calc(var(--header-height) + 2rem);">
+    <section class="section">
+      <div class="container">
+
+        <div class="section-header">
+          <span class="section-subtitle">ABOUT ME</span>
+          <h2 class="section-title">เกี่ยวกับตัวฉัน</h2>
+          <p class="section-desc">
+            ข้อมูลส่วนตัว ประวัติการศึกษา และเป้าหมายในการทำงานด้านเทคโนโลยีสารสนเทศ
+          </p>
+        </div>
+
+        <div class="about-grid" style="margin-bottom: 4rem;">
+
+          <!-- ประวัติส่วนตัว -->
+          <div class="about-card antigravity-reveal">
+            <h3 class="about-card-title">
+              <svg class="about-card-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              ประวัติส่วนตัว
+            </h3>
+
+            <p class="about-bio-text">
+              ผมชื่อ <strong>ก้องภพ จินดาพรสุข</strong> กำลังศึกษาระดับปริญญาตรี
+              ชั้นปีที่ 4 สาขาวิชาเทคโนโลยีสารสนเทศ
+              คณะเทคโนโลยีสารสนเทศและนวัตกรรม
+              มหาวิทยาลัยกรุงเทพ
+              มีความสนใจด้านเทคโนโลยีสารสนเทศ การพัฒนาเว็บไซต์
+              และการพัฒนาระบบสารสนเทศ โดยได้เรียนรู้ผ่านรายวิชาและโครงงานต่าง ๆ
+              ที่ช่วยพัฒนาทักษะการวิเคราะห์ การแก้ไขปัญหา และการทำงานร่วมกับผู้อื่น
+              พร้อมทั้งมุ่งมั่นพัฒนาตนเองอย่างต่อเนื่องเพื่อเตรียมความพร้อมสำหรับการทำงานในสายอาชีพด้าน IT
+            </p>
+
+            <div class="gpa-badge-container">
+              <div class="gpa-value">3.80</div>
+              <div>
+                <div class="gpa-label">เกรดเฉลี่ยสะสม (GPA) 3.80 / 4.00</div>
+                <div class="gpa-subtext">
+                  หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- เป้าหมายอาชีพ -->
+          <div class="about-card antigravity-reveal antigravity-delay-1">
+            <h3 class="about-card-title">
+              <svg class="about-card-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              เป้าหมายในอาชีพ
+            </h3>
+
+            <div class="career-goal-box">
+              <div class="career-goal-title">IT Support</div>
+
+              <p class="career-goal-desc">
+                เป้าหมายของผมคือการเริ่มต้นทำงานในตำแหน่ง IT Support
+                เพื่อพัฒนาทักษะด้านการดูแลระบบคอมพิวเตอร์ การแก้ไขปัญหาด้านเทคนิค
+                การให้ความช่วยเหลือผู้ใช้งาน และการบริหารจัดการระบบสารสนเทศ
+                พร้อมทั้งเรียนรู้และพัฒนาความรู้ด้านเทคโนโลยีอย่างต่อเนื่อง
+                เพื่อเติบโตในสายงานเทคโนโลยีสารสนเทศในอนาคต
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ประวัติการศึกษา -->
+        <div class="section-header">
+          <span class="section-subtitle">EDUCATION</span>
+          <h2 class="section-title">ประวัติการศึกษา</h2>
+        </div>
+
+        <div class="timeline-container">
+
+          <div class="timeline-item timeline-anim">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-card">
+
+              <span class="timeline-date">
+                พ.ศ. 2566 - ปัจจุบัน
+              </span>
+
+              <h3 class="timeline-title">
+                หลักสูตรวิทยาศาสตรบัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ
+              </h3>
+
+              <div class="timeline-institution">
+                คณะเทคโนโลยีสารสนเทศและนวัตกรรม มหาวิทยาลัยกรุงเทพ
+              </div>
+
+              <p class="timeline-details">
+                <strong>สาขาวิชา :</strong> เทคโนโลยีสารสนเทศ<br>
+                <strong>กำลังศึกษา :</strong> ชั้นปีที่ 4<br>
+                <strong>เกรดเฉลี่ยสะสม :</strong> 3.80 / 4.00
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared Footer Component Placeholder -->
+  <footer id="footer-placeholder"></footer>
+
+  <!-- Application Entry Script (ES Module) -->
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

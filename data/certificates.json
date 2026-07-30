@@ -1,0 +1,22 @@
+[
+    {
+    "id": "cert-1",
+    "title": "Cybersecurity Foundation Course",
+    "issuer": "National Cyber Security Agency (NCSA)",
+    "date": "March 2026",
+    "credentialId": "9094961573KC",
+    "image": "assets/images/certificates/cer1.jpg",
+    "pdf": "assets/images/certificates/cer1.pdf",
+    "description": "ผ่านการอบรมหลักสูตร Cybersecurity Foundation Course (21 ชั่วโมง) ครอบคลุมพื้นฐานด้านความมั่นคงปลอดภัยไซเบอร์ ภัยคุกคามทางไซเบอร์ และแนวทางการป้องกันตามหลักปฏิบัติที่ดี"
+  },
+  {
+    "id": "cert-2",
+    "title": "Build a Website with HTML, CSS, and GitHub Pages Skill Path",
+    "issuer": "Codecademy",
+    "date": "March 2026",
+    "credentialId": "7B775F29-0",
+    "image": "assets/images/certificates/cer2.jpg",
+    "pdf": "assets/images/certificates/cer2.pdf",
+    "description": "ผ่านหลักสูตร Build a Website with HTML, CSS และ GitHub Pages โดยได้ฝึกพัฒนาเว็บไซต์ด้วย HTML, CSS และเผยแพร่เว็บไซต์ผ่าน GitHub Pages"
+  }
+]
