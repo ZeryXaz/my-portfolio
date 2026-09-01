@@ -1,0 +1,510 @@
+/* ==========================================================================
+   ATS-FRIENDLY 1-PAGE A4 RESUME STYLESHEET (THAI VERSION)
+   Candidate: Kongphop Jindapornsuk | Target: IT Support & Tech
+   Design: Identical to English Version (Pure White Background, Deep Red Accent)
+   Features: Candidate Photo (Subtle Rounded-Rect), Clean ATS Hierarchy, Strict 1-Page A4
+   ========================================================================== */
+
+/* Local Webfonts */
+@font-face {
+  font-family: 'Noto Sans Thai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/NotoSansThai-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans Thai';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./fonts/NotoSansThai-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans Thai';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/NotoSansThai-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/Inter-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./fonts/Inter-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/Inter-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('./fonts/Inter-ExtraBold.ttf') format('truetype');
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-primary: #111827;      /* Very dark charcoal / near black */
+  --text-secondary: #374151;    /* Slate 700 */
+  --text-muted: #4b5563;        /* Slate 600 */
+  --heading-accent: #8b1d24;    /* Deep Crimson / Burgundy Accent */
+  --border-subtle: #d1d5db;     /* Light slate divider */
+  --border-accent: #8b1d24;     /* Red section accent line */
+  --link-color: #8b1d24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  color-adjust: exact !important;
+}
+
+html, body {
+  background-color: #f1f5f9;
+  font-family: 'Noto Sans Thai', 'Inter', 'Leelawadee UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.34;
+  font-size: 8.05pt;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+/* Strict A4 Container */
+.resume-page {
+  width: 210mm;
+  height: 297mm;
+  max-height: 297mm;
+  background-color: var(--bg-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  padding: 8.5mm 11.5mm 8.5mm 11.5mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+
+/* ==========================================================================
+   HEADER SECTION: PHOTO, NAME, TARGET ROLE, CONTACT
+   ========================================================================== */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1.5px solid var(--border-accent);
+  padding-bottom: 5px;
+  margin-bottom: 3.5px;
+}
+
+.profile-photo-wrapper {
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  width: 68px;
+  height: 82px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #9ca3af;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.header-text-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.candidate-name {
+  font-size: 17.5pt;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 1px;
+}
+
+.target-role {
+  font-size: 9.2pt;
+  font-weight: 700;
+  color: var(--heading-accent);
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  margin-bottom: 3.5px;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5px 8px;
+  font-size: 7.4pt;
+  color: var(--text-secondary);
+  line-height: 1.25;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.contact-value {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.contact-value:hover {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
+.contact-divider {
+  color: #9ca3af;
+  font-weight: 300;
+}
+
+/* ==========================================================================
+   MAIN RESUME SECTIONS
+   ========================================================================== */
+.resume-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5px;
+}
+
+.section-title {
+  font-size: 8.4pt;
+  font-weight: 700;
+  color: var(--heading-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1.2px solid var(--border-accent);
+  padding-bottom: 1px;
+  margin-bottom: 2.5px;
+}
+
+.section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.paragraph-text {
+  font-size: 7.6pt;
+  color: var(--text-secondary);
+  line-height: 1.34;
+  text-align: justify;
+}
+
+.paragraph-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   EDUCATION SECTION
+   ========================================================================== */
+.edu-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.entry-title {
+  font-size: 8.05pt;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.entry-date {
+  font-size: 7.5pt;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.entry-subtitle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 7.5pt;
+}
+
+.entry-institution {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.entry-gpa {
+  font-weight: 700;
+  color: var(--heading-accent);
+}
+
+/* ==========================================================================
+   TECHNICAL SKILLS SECTION
+   ========================================================================== */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8px;
+}
+
+.skill-row {
+  display: flex;
+  align-items: baseline;
+  font-size: 7.5pt;
+  line-height: 1.28;
+}
+
+.skill-group-name {
+  font-weight: 700;
+  color: var(--text-primary);
+  width: 185px;
+  min-width: 185px;
+  flex-shrink: 0;
+}
+
+.skill-group-items {
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   PROJECTS SECTION
+   ========================================================================== */
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2px;
+}
+
+.project-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.project-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.project-name-group {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.project-title {
+  font-size: 8.05pt;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.project-tag {
+  font-size: 6.9pt;
+  font-weight: 600;
+  color: var(--heading-accent);
+  background: #fdf2f2;
+  border: 1px solid #fecaca;
+  padding: 0.5px 4px;
+  border-radius: 2px;
+}
+
+.project-bullet-list {
+  list-style-type: disc;
+  padding-left: 13px;
+  margin: 0;
+}
+
+.project-bullet-list li {
+  font-size: 7.45pt;
+  color: var(--text-secondary);
+  line-height: 1.32;
+  margin-bottom: 1px;
+}
+
+.project-bullet-list li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.project-tech-line {
+  font-size: 7.15pt;
+  color: var(--text-muted);
+  line-height: 1.22;
+  margin-top: 0.5px;
+}
+
+.project-tech-line strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.project-tech-line a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-tech-line a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   CERTIFICATIONS SECTION
+   ========================================================================== */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5px;
+}
+
+.cert-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 7.5pt;
+  line-height: 1.28;
+}
+
+.cert-name-issuer {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.cert-name {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cert-issuer {
+  color: var(--text-muted);
+}
+
+.cert-date {
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  font-size: 7.3pt;
+}
+
+/* ==========================================================================
+   LANGUAGES SECTION
+   ========================================================================== */
+.lang-row {
+  display: flex;
+  gap: 20px;
+  font-size: 7.5pt;
+  line-height: 1.28;
+}
+
+.lang-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.lang-title {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.lang-desc {
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   PRINT STYLES FOR EXACT 1-PAGE A4 OUTPUT
+   ========================================================================== */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  html, body {
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 210mm !important;
+    height: 297mm !important;
+  }
+
+  .resume-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    margin: 0 !important;
+    padding: 8.5mm 11.5mm 8.5mm 11.5mm !important;
+    box-shadow: none !important;
+    border: none !important;
+    page-break-inside: avoid !important;
+    page-break-after: avoid !important;
+    overflow: hidden !important;
+  }
+
+  .section-title {
+    color: #8b1d24 !important;
+    border-bottom: 1.2px solid #8b1d24 !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  .project-tag {
+    background: #fdf2f2 !important;
+    color: #8b1d24 !important;
+    border: 1px solid #fecaca !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}

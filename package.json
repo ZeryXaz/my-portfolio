@@ -1,0 +1,14 @@
+{
+  "name": "it-portfolio",
+  "version": "1.0.0",
+  "description": "Kongphop Jindapornsuk - Web Portfolio & Resume",
+  "main": "index.html",
+  "scripts": {
+    "dev": "powershell -ExecutionPolicy Bypass -File ./serve.ps1 -Port 8080",
+    "start": "powershell -ExecutionPolicy Bypass -File ./serve.ps1 -Port 8080",
+    "preview": "npx serve -l 8080 .",
+    "export-pdf": "node scripts/export-pdf.js"
+  },
+  "author": "Kongphop Jindapornsuk",
+  "license": "ISC"
+}

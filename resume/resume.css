@@ -1,0 +1,601 @@
+/* ==========================================================================
+   RESUME A4 PRINT & PREVIEW STYLESHEET
+   Professional Two-Column IT Resume (A4 Portrait: 210mm x 297mm)
+   Sidebar: Deep Olive Slate (31%) | Main: Crisp White (69%)
+   Headers: Solid Rectangular Banners with White Centered Text
+   ========================================================================== */
+
+/* Local Offline High-Performance Webfonts */
+@font-face {
+  font-family: 'Noto Sans Thai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/NotoSansThai-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans Thai';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./fonts/NotoSansThai-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans Thai';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/NotoSansThai-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/Inter-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./fonts/Inter-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/Inter-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('./fonts/Inter-ExtraBold.ttf') format('truetype');
+}
+
+:root {
+  /* Color Palette - Deep Olive & Charcoal IT Theme */
+  --sidebar-bg: #1c2721;          /* Deep Olive Charcoal */
+  --sidebar-header-bg: #27372f;   /* Medium Olive Banner */
+  --sidebar-header-text: #ffffff;
+  --sidebar-text: #f1f5f9;        /* Slate 100 */
+  --sidebar-text-muted: #cbd5e1;  /* Slate 300 */
+  --sidebar-icon-bg: #2b3d34;     /* Solid circular icon background */
+  --sidebar-pill-bg: #24332b;
+  --sidebar-pill-text: #e2e8f0;
+  --sidebar-pill-border: #384d41;
+
+  --main-bg: #ffffff;
+  --main-header-bg: #1c2721;      /* Matching Deep Olive Banner */
+  --main-header-text: #ffffff;
+  --text-main: #0f172a;           /* Deep Charcoal */
+  --text-body: #1e293b;           /* Slate 800 */
+  --text-muted: #475569;          /* Slate 600 */
+  --text-light: #64748b;          /* Slate 500 */
+  --accent: #1e4d2b;              /* Dark Forest / Olive Accent */
+  --accent-light: #f0fdf4;        /* Soft green badge */
+  --accent-border: #bbf7d0;
+  --column-divider: #e2e8f0;      /* Thin clean divider */
+  --project-border: #1c2721;      /* Project card left border */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  color-adjust: exact !important;
+  letter-spacing: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #475569;
+  font-family: 'Noto Sans Thai', 'Inter', 'Leelawadee UI', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+/* Strict A4 Page Container */
+.resume-page {
+  width: 210mm;
+  height: 297mm;
+  max-height: 297mm;
+  background: var(--main-bg);
+  display: grid;
+  grid-template-columns: 65mm 145mm;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  page-break-inside: avoid;
+  page-break-after: avoid;
+}
+
+/* ==========================================================================
+   LEFT SIDEBAR (~31% / 65mm) - Deep Olive Dark Theme
+   ========================================================================== */
+.sidebar {
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--column-divider);
+  padding: 10mm 6mm 10mm 6mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  color: var(--sidebar-text);
+}
+
+/* Profile Avatar */
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
+.profile-avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* Sidebar Section Container */
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Sidebar Section Header - Solid Rectangular Banner */
+.sidebar-heading {
+  background-color: var(--sidebar-header-bg);
+  color: var(--sidebar-header-text);
+  font-size: 8.2pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 4px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+/* Contact List */
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5px;
+  padding: 0 2px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 7.6pt;
+  color: var(--sidebar-text);
+  line-height: 1.25;
+}
+
+/* Solid Circular Icon Wrapper */
+.contact-icon-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--sidebar-icon-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon-circle svg {
+  width: 10px;
+  height: 10px;
+  stroke: #ffffff;
+}
+
+.contact-item a {
+  color: var(--sidebar-text);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-item a:hover {
+  color: #86efac;
+}
+
+/* Education Card in Sidebar */
+.edu-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 7.7pt;
+  padding: 0 2px;
+}
+
+.edu-degree {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 8.2pt;
+  line-height: 1.25;
+}
+
+.edu-school {
+  color: var(--sidebar-text);
+  font-weight: 600;
+  font-size: 7.7pt;
+  line-height: 1.25;
+}
+
+.edu-faculty {
+  color: var(--sidebar-text-muted);
+  font-size: 7.3pt;
+  line-height: 1.25;
+}
+
+.edu-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 7.4pt;
+  color: var(--sidebar-text-muted);
+}
+
+.gpa-pill {
+  background-color: #2e4a38;
+  color: #86efac;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid #456d53;
+  font-size: 7.6pt;
+}
+
+/* Technical Skills in Sidebar */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 2px;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.skill-category-title {
+  font-size: 7.4pt;
+  font-weight: 700;
+  color: #86efac;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.skill-pill {
+  font-size: 6.9pt;
+  font-weight: 500;
+  background-color: var(--sidebar-pill-bg);
+  color: var(--sidebar-pill-text);
+  border: 1px solid var(--sidebar-pill-border);
+  padding: 1.5px 5px;
+  border-radius: 3px;
+  line-height: 1.2;
+}
+
+/* Languages in Sidebar */
+.lang-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5px;
+  padding: 0 2px;
+  font-size: 7.7pt;
+}
+
+.lang-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lang-name {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.lang-note {
+  font-size: 7.2pt;
+  color: var(--sidebar-text-muted);
+}
+
+/* ==========================================================================
+   RIGHT MAIN CONTENT (~69% / 145mm)
+   ========================================================================== */
+.main-content {
+  padding: 10mm 8.5mm 10mm 8.5mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: var(--main-bg);
+}
+
+/* Header Banner / Identity */
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--main-header-bg);
+}
+
+.main-name {
+  font-size: 21pt;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: normal !important;
+}
+
+.main-role-badge {
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-top: 3px;
+  letter-spacing: 0.8px;
+}
+
+/* Main Section Standard */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Main Section Header - Solid Rectangular Banner Full Width */
+.section-heading {
+  background-color: var(--main-header-bg);
+  color: var(--main-header-text);
+  font-size: 8.8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.6px;
+  line-height: 1.25;
+}
+
+.summary-text {
+  font-size: 8.2pt;
+  color: var(--text-body);
+  line-height: 1.46;
+  text-align: justify;
+  padding: 0 1px;
+}
+
+/* Projects Section */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6.5px;
+}
+
+.project-card {
+  border-left: 3px solid var(--project-border);
+  padding-left: 7.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-title {
+  font-size: 8.8pt;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+.project-category {
+  font-size: 6.9pt;
+  font-weight: 600;
+  color: var(--accent);
+  background-color: var(--accent-light);
+  padding: 1.5px 5.5px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  border: 1px solid var(--accent-border);
+}
+
+.project-desc-list {
+  list-style-type: disc;
+  padding-left: 13px;
+  margin: 0;
+}
+
+.project-desc-list li {
+  font-size: 7.8pt;
+  color: var(--text-body);
+  line-height: 1.38;
+  margin-bottom: 1.5px;
+}
+
+.project-tech {
+  font-size: 7.3pt;
+  color: var(--text-muted);
+  margin-top: 1px;
+  line-height: 1.3;
+}
+
+.project-tech strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.project-tech a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Certifications Section */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 7.9pt;
+}
+
+.cert-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.cert-title {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 8.2pt;
+  line-height: 1.2;
+}
+
+.cert-issuer {
+  color: var(--text-muted);
+  font-size: 7.4pt;
+  line-height: 1.2;
+}
+
+.cert-date-badge {
+  font-size: 7.3pt;
+  font-weight: 600;
+  color: var(--text-light);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   PRINT RULES FOR EXACT 1-PAGE A4 OUTPUT
+   ========================================================================== */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  html, body {
+    background: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 210mm !important;
+    height: 297mm !important;
+  }
+
+  .resume-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    max-height: 297mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    page-break-inside: avoid !important;
+    page-break-after: avoid !important;
+    overflow: hidden !important;
+  }
+
+  .sidebar {
+    background-color: #1c2721 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .sidebar-heading {
+    background-color: #27372f !important;
+    color: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .section-heading {
+    background-color: #1c2721 !important;
+    color: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .contact-icon-circle {
+    background-color: #2b3d34 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .gpa-pill {
+    background-color: #2e4a38 !important;
+    color: #86efac !important;
+    border: 1px solid #456d53 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .skill-pill {
+    background-color: #24332b !important;
+    color: #e2e8f0 !important;
+    border: 1px solid #384d41 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .project-category {
+    background-color: #f0fdf4 !important;
+    color: #1e4d2b !important;
+    border: 1px solid #bbf7d0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+}

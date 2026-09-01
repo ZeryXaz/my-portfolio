@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Viewer &amp; Export - ก้องภพ จินดาพรสุข</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', 'Noto Sans Thai', sans-serif;
+      background-color: #1e293b;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .top-bar {
+      background: #0f172a;
+      border-bottom: 1px solid #334155;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge {
+      background: #2563eb;
+      color: white;
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-toggle {
+      background: #1e293b;
+      border: 1px solid #475569;
+      color: #e2e8f0;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+    .btn-toggle:hover {
+      background: #334155;
+      border-color: #94a3b8;
+    }
+    .btn-toggle.active {
+      background: #2563eb;
+      border-color: #3b82f6;
+      color: #ffffff;
+    }
+    .btn-download {
+      background: #0f766e;
+      border: 1px solid #14b8a6;
+      color: #ffffff;
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+    .btn-download:hover {
+      background: #115e59;
+    }
+    .btn-print {
+      background: #16a34a;
+      border: 1px solid #22c55e;
+      color: #ffffff;
+      padding: 7px 16px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn-print:hover {
+      background: #15803d;
+    }
+    .frame-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 24px 16px;
+      background: #334155;
+      overflow-y: auto;
+    }
+    iframe {
+      width: 210mm;
+      height: 297mm;
+      border: none;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.55);
+      border-radius: 2px;
+      background: white;
+      flex-shrink: 0;
+    }
+    @media print {
+      .top-bar {
+        display: none !important;
+      }
+      .frame-container {
+        padding: 0 !important;
+        background: none !important;
+      }
+      body {
+        background: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="brand-title">
+      <span>ก้องภพ จินดาพรสุข (Kongphop Jindapornsuk)</span>
+      <span class="badge">A4 1-Page Resume</span>
+    </div>
+
+    <div class="controls">
+      <button class="btn-toggle active" id="btn-th" onclick="switchResume('resume-th.html', this, 'resume-th.pdf')">
+        🇹🇭 Thai Version
+      </button>
+      <button class="btn-toggle" id="btn-en" onclick="switchResume('resume-en.html', this, 'resume-en.pdf')">
+        🇬🇧 English Version
+      </button>
+      <a class="btn-download" id="btn-download-pdf" href="resume-th.pdf" download="Resume-Kongphop.pdf">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Download PDF
+      </a>
+      <button class="btn-print" onclick="printResume()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        Print
+      </button>
+    </div>
+  </header>
+
+  <main class="frame-container">
+    <iframe id="resume-frame" src="resume-th.html"></iframe>
+  </main>
+
+  <script>
+    function switchResume(url, btn, pdfUrl) {
+      document.getElementById('resume-frame').src = url;
+      document.querySelectorAll('.btn-toggle').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('btn-download-pdf').href = pdfUrl;
+      document.getElementById('btn-download-pdf').download = pdfUrl === 'resume-th.pdf' ? 'Resume-Kongphop-TH.pdf' : 'Resume-Kongphop-EN.pdf';
+    }
+
+    function printResume() {
+      const frame = document.getElementById('resume-frame');
+      frame.contentWindow.focus();
+      frame.contentWindow.print();
+    }
+  </script>
+
+</body>
+</html>
