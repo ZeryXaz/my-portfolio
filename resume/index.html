@@ -155,13 +155,13 @@
     </div>
 
     <div class="controls">
-      <button class="btn-toggle active" id="btn-th" onclick="switchResume('resume-th.html', this, 'resume-th.pdf')">
+      <button class="btn-toggle active" id="btn-th" onclick="switchResume('./resume-th.html', this, './resume-th.pdf')">
         🇹🇭 Thai Version
       </button>
-      <button class="btn-toggle" id="btn-en" onclick="switchResume('resume-en.html', this, 'resume-en.pdf')">
+      <button class="btn-toggle" id="btn-en" onclick="switchResume('./resume-en.html', this, './resume-en.pdf')">
         🇬🇧 English Version
       </button>
-      <a class="btn-download" id="btn-download-pdf" href="resume-th.pdf" download="Resume-Kongphop.pdf">
+      <a class="btn-download" id="btn-download-pdf" href="./resume-th.pdf" download="Resume-Kongphop-TH.pdf">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
         Download PDF
       </a>
@@ -173,23 +173,50 @@
   </header>
 
   <main class="frame-container">
-    <iframe id="resume-frame" src="resume-th.html"></iframe>
+    <iframe id="resume-frame" src="./resume-th.html"></iframe>
   </main>
 
   <script>
+    function resolveResumePath(relativePath) {
+      const pathname = window.location.pathname;
+      const cleanPath = relativePath.replace(/^\.\//, '');
+      if (pathname.endsWith('/') || pathname.endsWith('.html')) {
+        return './' + cleanPath;
+      }
+      return './resume/' + cleanPath;
+    }
+
     function switchResume(url, btn, pdfUrl) {
-      document.getElementById('resume-frame').src = url;
+      const targetUrl = resolveResumePath(url);
+      const targetPdf = resolveResumePath(pdfUrl);
+
+      document.getElementById('resume-frame').src = targetUrl;
       document.querySelectorAll('.btn-toggle').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      document.getElementById('btn-download-pdf').href = pdfUrl;
-      document.getElementById('btn-download-pdf').download = pdfUrl === 'resume-th.pdf' ? 'Resume-Kongphop-TH.pdf' : 'Resume-Kongphop-EN.pdf';
+
+      const downloadBtn = document.getElementById('btn-download-pdf');
+      downloadBtn.href = targetPdf;
+      downloadBtn.download = pdfUrl.includes('resume-th') ? 'Resume-Kongphop-TH.pdf' : 'Resume-Kongphop-EN.pdf';
+    }
+
+    function initResume() {
+      const frame = document.getElementById('resume-frame');
+      const downloadBtn = document.getElementById('btn-download-pdf');
+      frame.src = resolveResumePath('./resume-th.html');
+      downloadBtn.href = resolveResumePath('./resume-th.pdf');
     }
 
     function printResume() {
       const frame = document.getElementById('resume-frame');
-      frame.contentWindow.focus();
-      frame.contentWindow.print();
+      try {
+        frame.contentWindow.focus();
+        frame.contentWindow.print();
+      } catch (e) {
+        window.print();
+      }
     }
+
+    initResume();
   </script>
 
 </body>

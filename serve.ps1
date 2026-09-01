@@ -26,6 +26,10 @@ try {
 
         $fullPath = [System.IO.Path]::Combine($rootPath, $relPath)
 
+        if (Test-Path $fullPath -PathType Container) {
+            $fullPath = [System.IO.Path]::Combine($fullPath, "index.html")
+        }
+
         if (-not (Test-Path $fullPath -PathType Leaf)) {
             $response.StatusCode = 404
             $errBuf = [System.Text.Encoding]::UTF8.GetBytes("404 Not Found: $relPath")
