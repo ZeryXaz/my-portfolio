@@ -5,11 +5,11 @@
       "title": "Programming Languages",
       "icon": "code",
       "skills": [
-        { "name": "HTML5", "level": "Intermediate" },
-        { "name": "CSS3", "level": "Intermediate" },
+        { "name": "HTML5", "level": "Basic" },
+        { "name": "CSS3", "level": "Basic" },
         { "name": "JavaScript", "level": "Basic" },
         { "name": "PHP", "level": "Basic" },
-        { "name": "SQL", "level": "Intermediate" }
+        { "name": "SQL", "level": "Basic" }
       ]
     },
     {
@@ -17,8 +17,8 @@
       "title": "Backend & Database",
       "icon": "database",
       "skills": [
-        { "name": "Laravel", "level": "Intermediate" },
-        { "name": "MySQL", "level": "Intermediate" },
+        { "name": "Laravel", "level": "Basic" },
+        { "name": "MySQL", "level": "Basic" },
         { "name": "Oracle Database", "level": "Basic" }
       ]
     },
@@ -30,7 +30,7 @@
         { "name": "Git & GitHub", "level": "Intermediate" },
         { "name": "VS Code", "level": "Intermediate" },
         { "name": "Figma", "level": "Basic" },
-        { "name": "XAMPP", "level": "Intermediate" }
+        { "name": "XAMPP", "level": "Basic" }
       ]
     },
     {
@@ -38,9 +38,9 @@
       "title": "Other Skills",
       "icon": "cpu",
       "skills": [
-        { "name": "System Analysis", "level": "Intermediate" },
-        { "name": "Problem Solving", "level": "Intermediate" },
-        { "name": "Team Collaboration", "level": "Intermediate" }
+        { "name": "System Analysis", "level": "Basic" },
+        { "name": "Problem Solving", "level": "Basic" },
+        { "name": "Team Collaboration", "level": "Basic" }
       ]
     }
   ]
